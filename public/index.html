@@ -5,42 +5,85 @@
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
-    />
+    <meta name="description"content="We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."/>
     <meta name="og:title"content="Little Lemon"/>
     <meta name="og:description" content="We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."/>
     <meta name="og:image" content="logo.png"/>
     <link rel="apple-touch-icon" href="logo.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <style>
+    .item1 { grid-area: nav; }
+    .item2 { grid-area: hero;}
+    .item3 { grid-area: highlights; }
+    .item4 { grid-area: testimonials; }
+    .item5 {grid-area: about;}
+    .item6 { grid-area: footer; }
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+      'nav nav nav nav nav nav'
+      'hero hero hero hero hero hero'
+      'highlights highlights highlights highlights highlights highlights'
+      'testimonials testimonials testimonials testimonials testimonials testimonials'
+      'about about about about about about'
+      'footer footer footer footer footer footer';
+      gap: 2px;
+      background-color: #EDEFEE;
+      padding: 2px;
+      margin-top: -60px;
+    }
+    .grid-container > div {
+       background-color: #fcfffe;
+       text-align: center;
+       padding: 50px 0;
+       font-size: 30px;
+      }
+      ul#navbar li {
+        display: inline;
+        font-family: Karla;
+        font-size: 18px;
+        border-image: 16px;
+        vertical-align: text-top;
+        margin: right 40px;
+      }
+      .button{
+        border-radius: 16px;
+        background-color: #F4CE14;
+        font-weight: 600;
+        font: size 18px;
+        position: relative;
+        right: 300px;
+      }
+      .item2{
+        margin-top: ;
+      }
+    </style>
     <link rel="manifest" href="manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>Little Lemon</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="grid-container">
+      <div class="item1">
+        <ul id="navbar">
+         <li><img style="vertical-align: bottom;" src="logo.png" alt="lemon logo" height="50px" width="200px"/></li>
+         <li><a href="/home">Home</a></li>
+         <li><a href="/about">About</a></li>
+         <li><a href="/menu">Menu</a></li>
+         <li><a href="/reservations">Reservations</a></li>
+         <li><a href="/orderonline">Order Online</a></li>
+         <li><a href="/login">Login</a></li>
+       </ul>
+       </div>
+      <div class="item2">
+        <h1 style="color:#F4CE14; margin-right: 290px; font-size: 64px; font-family: Markazi Text;">Little Lemon</h1>
+        <h2 style="color: #EDEFEE; margin-right: 460px; font-size: 40px;font-family: Markazi Text;">Chicago</h2>
+        <p style="font-size: 18px;">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+        <img style="border-radius: 16px; margin-left: 400px;" src="restauranfood.jpg" width=100 height=100 alt="resurant food"/>
+        <button class="button">Reserve a Table</button>
+      </div>
+      <div class="item3">Highlights</div>
+      <div class="item4">Testiomonials</div>
+      <div class="item5">About</div>
+      <div class="item6">Footer</div>
+   </div>
   </body>
 </html>
